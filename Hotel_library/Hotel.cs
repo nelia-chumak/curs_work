@@ -54,6 +54,16 @@ namespace Hotel_library
         {
             return settlement_account;
         }
+        //method for return price of room
+        public decimal get_price(int number1, Guest[] guests, DateTime date_from, DateTime date_to)
+        {
+            Room room = FindRoom(number1);
+            //if room exists
+            if (room == null)
+                throw new RoomNotFoundException("Room with such number not found!"); //trow exception RoomNotFoundException
+            else
+                return rooms[number1 - 1].GetPrice(guests, date_from, date_to);
+        }
         //method for renting a room by number
         public void Rent(RoomStateHandler rentHandler, int number1, Guest[] guests1, int year_to, int month_to, int day_to)
         {

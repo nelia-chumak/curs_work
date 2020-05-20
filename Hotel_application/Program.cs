@@ -265,7 +265,7 @@ namespace Hotel_application
                 (year_to, month_to, day_to) = SplitRead(Console.ReadLine());
                 DateTime from = new DateTime(year_from, month_from, day_from);
                 DateTime to = new DateTime(year_to, month_to, day_to);
-                Console.WriteLine("Price is {0}", hotel.rooms[number-1].GetPrice(guests, from, to));
+                Console.WriteLine("Price is {0}", hotel.get_price(number, guests, Hotel.current_date, to));
                 Console.WriteLine("Do you want to book this number? Enter: \n1 for Yes \n2 for No ");
             }
             if (type == 2) 
@@ -273,7 +273,7 @@ namespace Hotel_application
                 Console.WriteLine("Enter renting end date in format dd.mm.yyyy : ");
                 (year_to, month_to, day_to) = SplitRead(Console.ReadLine());
                 DateTime to = new DateTime(year_to, month_to, day_to);
-                Console.WriteLine("Price is {0}", hotel.rooms[number-1].GetPrice(guests, Hotel.current_date, to));
+                Console.WriteLine("Price is {0}", hotel.get_price(number, guests, Hotel.current_date, to));
                 Console.WriteLine("Do you want to rent this number? Enter: \n1 for Yes \n0 for No ");
             }
             int chosen = Convert.ToInt32(Console.ReadLine());
