@@ -348,7 +348,14 @@ namespace Hotel_application
             int number = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter amount of days: ");
             int amount = Convert.ToInt32(Console.ReadLine());
-            hotel.rooms[number - 1].data_of_renting=hotel.rooms[number - 1] + amount;
+            //if room is rented now
+            if (hotel.rooms[number - 1].data_of_renting.rented)
+            {
+                hotel.rooms[number - 1].data_of_renting = hotel.rooms[number - 1] + amount;
+                Console.WriteLine("Operation was successfully completed");
+            }
+            else PrintBuildInException("This number is not currently rented!");
+
         }
     }
 }
