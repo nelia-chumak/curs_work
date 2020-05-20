@@ -18,6 +18,8 @@ namespace Hotel_library
             //check this value: if guest is older then 100 years
             if ((DateTime.Today - date_of_birth_temp).TotalDays / 365 > 100)
                 throw new ImpossibleAge("This age is greater than possible!"); //trow exception type ImpossibleAge
+            else if ((DateTime.Today - date_of_birth_temp).TotalDays / 365 < 18)
+                throw new ImpossibleAge("This age is smaller than possible!"); //trow exception type ImpossibleAge
             //check name for availability of letters, gender and passport ID for right input
             else if (!ContainsLetters(name1) || (gender1 != "feminin" && gender1 != "masculin") || passport_ID1 < 100000000)
                 throw new System.FormatException(); //trow exception type FormatException
