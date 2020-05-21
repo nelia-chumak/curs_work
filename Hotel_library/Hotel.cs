@@ -57,6 +57,11 @@ namespace Hotel_library
         {
             return settlement_account;
         }
+        //method to put on money on settlement_account
+        public void Put_on_settlement_account(decimal sum)
+        {
+            settlement_account+=sum;
+        }
         //method for return price of room
         public decimal get_price(int number1, Guest[] guests, DateTime date_from, DateTime date_to)
         {

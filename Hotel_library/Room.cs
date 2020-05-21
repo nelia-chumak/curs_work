@@ -18,13 +18,15 @@ namespace Hotel_library
         public class RentedRoom
         {
             public bool rented { get; internal set; }           //status of renting
-            internal Guest[] guests;                            //array of guests
-            internal DateTime date_from;                        //date start renting
-            internal DateTime date_to;                          //date end renting
+            public Guest[] guests  { get; internal set; }       //array of guests
+            public DateTime date_from { get; internal set; }    //date start renting
+            public DateTime date_to { get; internal set; }      //date end renting
+            
             //redifinition operator "+" for rent renewal
             public static RentedRoom operator +(RentedRoom thiss, int days)
             {
-                thiss.date_to = thiss.date_to.AddDays(days);
+                if (days<0) throw new System.FormatException(); //trow exception type FormatException
+                else thiss.date_to = thiss.date_to.AddDays(days);
                 return thiss;
             }
         }
@@ -49,7 +51,7 @@ namespace Hotel_library
             //check date end renting accordind to today date
             else if (date_to < DateTime.Today.AddDays(1))
                 //if it is smaller throw exception type EndDateIsLessThenStartDate
-                throw new EndDateIsLessThenStartDate("End date is less then start date or start");
+                throw new EndDateIsLessThenStartDate("End date is less then tomorrow");
             else {
                 data_of_renting.rented = true;
                 data_of_renting.guests = new Guest[guests1.Length];

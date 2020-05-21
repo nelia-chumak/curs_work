@@ -360,7 +360,9 @@ namespace Hotel_application
                 //if room is rented now
                 if (hotel.rooms[number - 1].data_of_renting.rented)
                 {
-                    hotel.rooms[number - 1].data_of_renting += amount;
+                    Room room = hotel.rooms[number - 1];
+                    room.data_of_renting += amount;
+                    hotel.Put_on_settlement_account(hotel.get_price(number, room.data_of_renting.guests, room.data_of_renting.date_from, room.data_of_renting.date_to));
                     Console.WriteLine("Operation was successfully completed");
                 }
                 else PrintBuildInException("This number is not currently rented!");
