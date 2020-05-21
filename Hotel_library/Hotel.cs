@@ -6,7 +6,7 @@ namespace Hotel_library
 {
     public class Hotel
     {
-        private string name_of_hotel;                            //name of hotel
+        public string name_of_hotel { get; private set; }        //name of hotel
         public Room[] rooms;                                     //array of hotel rooms
         private decimal settlement_account;                      //or checking account
         public static DateTime current_date = DateTime.Today;    //today's date

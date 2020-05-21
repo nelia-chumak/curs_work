@@ -222,7 +222,7 @@ namespace Hotel_application
         //method for display value of settlement account
         private static void Get_settlement_account(Hotel hotel)
         {
-            Console.WriteLine(hotel.get_settlement_account());
+            Console.WriteLine("In settlement account of {0} is {1} uah", hotel.name_of_hotel, hotel.get_settlement_account());
         }
         //print messages for events
         private static void RentHandler(object sender, RoomEventArgs e)
@@ -354,7 +354,7 @@ namespace Hotel_application
                 //if room is rented now
                 if (hotel.rooms[number - 1].data_of_renting.rented)
                 {
-                    hotel.rooms[number - 1].data_of_renting = hotel.rooms[number - 1].data_of_renting + amount;
+                    hotel.rooms[number - 1].data_of_renting += amount;
                     Console.WriteLine("Operation was successfully completed");
                 }
                 else PrintBuildInException("This number is not currently rented!");
