@@ -60,7 +60,7 @@ namespace Hotel_application
                                 switch (command)
                                 {
                                     case 1:
-                                        if (Hotel.tomorrow == null) Hotel.tomorrow();  //set tomorrow's date and check status of rooms
+                                        Hotel.tomorrow?.Invoke();  //set tomorrow's date and check status of rooms
                                         Console.WriteLine("Today is {0}", Hotel.current_date.ToString("d"));
                                         break;
                                     case 2:
@@ -271,7 +271,7 @@ namespace Hotel_application
                 (year_to, month_to, day_to) = SplitRead(Console.ReadLine());
                 DateTime from = new DateTime(year_from, month_from, day_from);
                 DateTime to = new DateTime(year_to, month_to, day_to);
-                Console.WriteLine("Price is {0}", hotel.get_price(number, guests, Hotel.current_date, to));
+                Console.WriteLine("Price is {0}", hotel.get_price(number, guests, from, to));
                 Console.WriteLine("Do you want to book this number? Enter: \n1 for Yes \n0 for No ");
             }
             if (type == 2) 
@@ -360,9 +360,11 @@ namespace Hotel_application
                 //if room is rented now
                 if (hotel.rooms[number - 1].data_of_renting.rented)
                 {
+                    //temp variables
                     Room room = hotel.rooms[number - 1];
+                    DateTime date_temp = room.data_of_renting.date_to;
                     room.data_of_renting += amount;
-                    hotel.Put_on_settlement_account(hotel.get_price(number, room.data_of_renting.guests, room.data_of_renting.date_from, room.data_of_renting.date_to));
+                    hotel.Put_on_settlement_account(hotel.get_price(number, room.data_of_renting.guests, date_temp, room.data_of_renting.date_to));
                     Console.WriteLine("Operation was successfully completed");
                 }
                 else PrintBuildInException("This number is not currently rented!");
