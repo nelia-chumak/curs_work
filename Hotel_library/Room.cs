@@ -21,6 +21,12 @@ namespace Hotel_library
             internal Guest[] guests;                            //array of guests
             internal DateTime date_from;                        //date start renting
             internal DateTime date_to;                          //date end renting
+            //redifinition operator "+" for rent renewal
+            public static RentedRoom operator +(RentedRoom thiss, int days)
+            {
+                thiss.date_to = thiss.date_to.AddDays(days);
+                return thiss;
+            }
         }
         public class BookedRoom
         {
@@ -83,12 +89,6 @@ namespace Hotel_library
                 data_of_booking[s].date_from = date_from;
                 data_of_booking[s].date_to = date_to;
             }
-        }
-        //redifinition operator "+" for rent renewal
-        public static RentedRoom operator +(Room thiss, int days)
-        {
-            thiss.data_of_renting.date_to=thiss.data_of_renting.date_to.AddDays(days);
-            return thiss.data_of_renting;
         }
         //method for pay room
         public abstract void Pay(ref decimal s_a, Guest[] guests, DateTime date_from, DateTime date_to);

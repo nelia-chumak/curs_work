@@ -354,7 +354,7 @@ namespace Hotel_application
                 //if room is rented now
                 if (hotel.rooms[number - 1].data_of_renting.rented)
                 {
-                    hotel.rooms[number - 1].data_of_renting = hotel.rooms[number - 1] + amount;
+                    hotel.rooms[number - 1].data_of_renting = hotel.rooms[number - 1].data_of_renting + amount;
                     Console.WriteLine("Operation was successfully completed");
                 }
                 else PrintBuildInException("This number is not currently rented!");
