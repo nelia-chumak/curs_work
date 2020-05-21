@@ -272,7 +272,7 @@ namespace Hotel_application
                 DateTime from = new DateTime(year_from, month_from, day_from);
                 DateTime to = new DateTime(year_to, month_to, day_to);
                 Console.WriteLine("Price is {0}", hotel.get_price(number, guests, Hotel.current_date, to));
-                Console.WriteLine("Do you want to book this number? Enter: \n1 for Yes \n2 for No ");
+                Console.WriteLine("Do you want to book this number? Enter: \n1 for Yes \n0 for No ");
             }
             if (type == 2) 
             {

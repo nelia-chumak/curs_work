@@ -84,6 +84,7 @@ namespace Hotel_library
                     room.Rent(guests1, year_to, month_to, day_to);
                     //and pay it
                     room.Pay(ref this.settlement_account, room.data_of_renting.guests, room.data_of_renting.date_from, room.data_of_renting.date_to);
+                    room.Rented -= rentHandler;
                 }
                 else throw new RoomIsRented("Room is already rented!"); //trow exception type RoomIsRented
             }
@@ -109,12 +110,13 @@ namespace Hotel_library
                 }
                 if (flag)
                 {
-                    if (room.data_of_booking.Length == 1) room.Booked += bookHandler; //subscribe method to event
+                    room.Booked += bookHandler; //subscribe method to event
                     //we book it
                     room.Book(guests1, year_from, month_from, day_from, year_to, month_to, day_to);
                     int s = room.data_of_booking.Length - 2; //index of penultimate entry
                     //and pay it
                     room.Pay(ref this.settlement_account, room.data_of_booking[s].guests, room.data_of_booking[s].date_from, room.data_of_booking[s].date_to);
+                    room.Booked -= bookHandler;
                 }
                 else throw new RoomIsBooked("Room is already booked!");//trow exception type RoomIsBooked
             }
