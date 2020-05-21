@@ -43,6 +43,9 @@ namespace Hotel_library
             if (guests1.Length > number_of_places)
                 //if it is larger, throw exception type TooManyGuests
                 throw new TooManyGuests("Too many guests for this number!");
+            else if(guests1.Length < 1)
+                //if it is less, throw exception type TooFewGuests
+                throw new TooFewGuests("Too few guests for this number!");
             //check date end renting accordind to today date
             else if (date_to < DateTime.Today.AddDays(1))
                 //if it is smaller throw exception type EndDateIsLessThenStartDate
@@ -70,6 +73,9 @@ namespace Hotel_library
             if (guests1.Length > number_of_places)
                 //if it is larger, throw exception type TooManyGuests
                 throw new TooManyGuests("Too many guests for this number!");
+            else if (guests1.Length < 1)
+                //if it is less, throw exception type TooFewGuests
+                throw new TooFewGuests("Too few guests for this number!");
             //check date end booking accordind to today date and start date
             if (date_from > date_to || date_from < DateTime.Today.AddDays(1))
                 //if it is larger throw exception type EndDateIsLessThenStartDate

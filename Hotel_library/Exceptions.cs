@@ -36,6 +36,12 @@ namespace Hotel_library
         public TooManyGuests() { }
         public TooManyGuests(string message) : base(message) { }
     }
+    //Exception for situations, when there is less one guest
+    public class TooFewGuests : Exception
+    {
+        public TooFewGuests() { }
+        public TooFewGuests(string message) : base(message) { }
+    }
     //Exception for situations, when date start booking/renting or date end booking/renting is wrong
     public class EndDateIsLessThenStartDate : Exception
     {

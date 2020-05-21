@@ -25,6 +25,7 @@ namespace Hotel_application
                         Console.WriteLine();
                     }
                     else f++;
+                    Console.WriteLine("Log in as:");
                     Console.WriteLine("1 Admin \n2 Guest  \n3 Exit ");
                     Console.WriteLine("Enter item number: ");
                     int type = Convert.ToInt32(Console.ReadLine()); //user's choice
@@ -48,6 +49,7 @@ namespace Hotel_application
                         {
                             Console.WriteLine();
                             Console.WriteLine();
+                            Console.WriteLine("What do you want to do?");
                             Console.WriteLine("1 Next day \n2 View settlement account");
                             Console.WriteLine("3 See info about all rooms  \n4 Log out");
                             Console.WriteLine("Enter item number: ");
@@ -58,8 +60,7 @@ namespace Hotel_application
                                 switch (command)
                                 {
                                     case 1:
-                                        Hotel.change_current_date()   ;    //set tomorrow's date
-                                        Reikartz.Check();                  //check status of rooms
+                                        Hotel.tomorrow();                  //set tomorrow's date and check status of rooms
                                         Console.WriteLine("Today is {0}", Hotel.current_date.ToString("d"));
                                         break;
                                     case 2:
@@ -98,6 +99,7 @@ namespace Hotel_application
                         {
                             Console.WriteLine();
                             Console.WriteLine();
+                            Console.WriteLine("What do you want to do?");
                             Console.WriteLine("1 Book \n2 Rent \n3 Extend rent");
                             Console.WriteLine("4 See info about all rooms  \n5 Log out");
                             Console.WriteLine("Enter item number: ");

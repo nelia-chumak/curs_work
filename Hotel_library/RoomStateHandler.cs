@@ -4,6 +4,8 @@ using System.Text;
 
 namespace Hotel_library
 {
+    //Delegate that will be used to change date and update information
+    public delegate void TomorrowHandler();
     //Delegate that will be used to create events
     public delegate void RoomStateHandler(object sender, RoomEventArgs e);
     //Class for event handling

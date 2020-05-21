@@ -10,10 +10,13 @@ namespace Hotel_library
         public Room[] rooms;                                     //array of hotel rooms
         private decimal settlement_account;                      //or checking account
         public static DateTime current_date = DateTime.Today;    //today's date
+        public static TomorrowHandler tomorrow = null;                         //delegate variable
         //constructor with parameters
         public Hotel(string name_of_hotel1)
         {
             name_of_hotel = name_of_hotel1;
+            tomorrow += change_current_date;
+            tomorrow += Check;
         }
         //add one day
         public static void change_current_date()
