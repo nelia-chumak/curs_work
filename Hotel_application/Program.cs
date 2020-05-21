@@ -60,7 +60,7 @@ namespace Hotel_application
                                 switch (command)
                                 {
                                     case 1:
-                                        Hotel.tomorrow();                  //set tomorrow's date and check status of rooms
+                                        if (Hotel.tomorrow == null) Hotel.tomorrow();  //set tomorrow's date and check status of rooms
                                         Console.WriteLine("Today is {0}", Hotel.current_date.ToString("d"));
                                         break;
                                     case 2:
@@ -158,6 +158,10 @@ namespace Hotel_application
                                 PrintException(exception);
                             }
                             catch (TooManyGuests exception)
+                            {
+                                PrintException(exception);
+                            }
+                            catch (TooFewGuests exception)
                             {
                                 PrintException(exception);
                             }
