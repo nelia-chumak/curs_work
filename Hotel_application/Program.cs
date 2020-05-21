@@ -224,7 +224,7 @@ namespace Hotel_application
         {
             Console.WriteLine(hotel.get_settlement_account());
         }
-        //messages for certain events
+        //print messages for events
         private static void RentHandler(object sender, RoomEventArgs e)
         {
             Console.WriteLine(e.message);
