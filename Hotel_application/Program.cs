@@ -355,7 +355,7 @@ namespace Hotel_application
             Console.WriteLine("Enter amount of days: ");
             int amount = Convert.ToInt32(Console.ReadLine());
             //if such room exist
-            if (number < hotel.rooms.Length)
+            if (number <= hotel.rooms.Length)
             {
                 //if room is rented now
                 if (hotel.rooms[number - 1].data_of_renting.rented)

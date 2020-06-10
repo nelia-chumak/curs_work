@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Hotel_library.EndDateIsLessThenStartDate" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_library.Guest" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAQAAAAAgAAAAgAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Guest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_library.Hotel" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAgiAAAAAABAIBIAAAAAACAAAAAgAQAAABAAAAI=</HashCode>
+      <FileName>Hotel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_library.ImpossibleAge" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_library.JuniorSuiteRoom" Collapsed="true">
+    <Position X="0.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgBAEAAAAAAAACAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>JuniorSuiteRoom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_library.Room">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="Hotel_library.Room.BookedRoom" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Room.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="Hotel_library.Room.RentedRoom" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Room.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAEAAACAAAAEQgBAUACAAAAAACABAAASAACAAAAAAAE=</HashCode>
+      <FileName>Room.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Hotel_library.RoomEventArgs" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>RoomStateHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_library.RoomIsBooked" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_library.RoomIsRented" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_library.RoomNotFoundException" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_library.StandardRoom" Collapsed="true">
+    <Position X="2.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgBAEAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StandardRoom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_library.SuiteRoom" Collapsed="true">
+    <Position X="5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgBAEAAAAEIAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SuiteRoom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_library.TooFewGuests" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotel_library.TooManyGuests" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Hotel_library.IRoom" Collapsed="true">
+    <Position X="7.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IRoom.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Delegate Name="Hotel_library.RoomStateHandler" Collapsed="true">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RoomStateHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Hotel_library.TomorrowHandler" Collapsed="true">
+    <Position X="9.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RoomStateHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
